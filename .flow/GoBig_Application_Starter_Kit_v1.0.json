@@ -1,0 +1,2427 @@
+{
+  "$schema": "https://cambigo.com/schemas/flow-document-v2.json",
+  "cambigo_doc_version": "2",
+  "cambigo_app_version": "1.7.2",
+  "metadata": {
+    "id": "1725167e-46e0-4daf-adcd-c9d66a91c96b",
+    "version": "1.0",
+    "title": "GoBig Application Starter Kit",
+    "description": "This is the specification for the GoBig repository, and constructing the foundation of a full stack solution for building apps using Next.js.",
+    "createdAt": "2025-11-25T00:04:00.815Z",
+    "updatedAt": "2025-11-25T03:03:55.456Z",
+    "theme": "cambigo",
+    "offlineOnly": false,
+    "author": "Chris Compton",
+    "status": "draft",
+    "aiDescription": "This Cambigo Flow Document describes a workflow process with sequential and branching steps. It contains nodes (steps/actions) and groups (connections between steps). Each node has a 'kind' property indicating its type (step, action, notification, etc.) and a 'context' object with detailed information. Groups define the flow control (direct, alternative, exception, repeating). Refer to the 'schemaContext' field for complete schema descriptions and field definitions."
+  },
+  "items": [
+    {
+      "id": "node-a67f3a6e-4f25-4f05-a222-572d428af5b7",
+      "data": {
+        "kind": "start",
+        "title": "Start"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-9e062fa0-e59f-4f81-b2e1-3ef39c56a7a9",
+      "data": {
+        "kind": "phase",
+        "title": "Documentation"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-8c67df56-be10-42f1-a80d-7fefdc85558a",
+      "data": {
+        "kind": "directive",
+        "title": "Use docusaurus to support a static site for documentation.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:10:43.050Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-dacd7816-994c-4e0a-97c5-15600ac40b95",
+      "data": {
+        "kind": "step",
+        "title": "Support building and running via Dockerfile.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:20:57.618Z",
+        "finalRequirements": "- Should perform a build stage.\n- Runs the distribution files using caddy."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c11119ff-e996-402a-829b-da215feae6af",
+      "data": {
+        "kind": "phase",
+        "title": "Application"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c879f305-062b-403f-b071-5a4be8809da8",
+      "data": {
+        "kind": "directive",
+        "title": "Use next.js 16+ for the application framework",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:10:04.100Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-38b6f9d6-d4c1-42a1-af36-c5ebbc864647",
+      "data": {
+        "kind": "directive",
+        "title": "Set up the application to use vitest for testing.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:23:10.353Z",
+        "finalRequirements": "Tests noted as a Measure type in this flow will have a corresponding vitest."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-183f20bf-781d-4802-9835-2be830051b33",
+      "data": {
+        "kind": "directive",
+        "title": "Utilize Chakra UI components version 3 or greater",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:46:55.223Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038814120-ijoek0hhn",
+            "url": "https://chakra-ui.com/llms.txt",
+            "title": "LLMS.txt for Chakra UI",
+            "createdAt": "2025-11-25T02:46:54.120Z",
+            "updatedAt": "2025-11-25T02:46:54.120Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-20acce2a-0de5-4ca0-992f-21689c457891",
+      "data": {
+        "kind": "step",
+        "title": "Set up a drizzle migration to track settings for each user.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:50:53.406Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f71f2cfd-f587-42e2-b654-9769e9c45fbe",
+      "data": {
+        "kind": "step",
+        "title": "Support building and running via Dockerfile",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:48:08.110Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038887186-91vpe58db",
+            "url": "https://docs.docker.com/llms.txt",
+            "title": "LLMS.txt for Docker",
+            "createdAt": "2025-11-25T02:48:07.186Z",
+            "updatedAt": "2025-11-25T02:48:07.186Z"
+          }
+        ],
+        "finalRequirements": "- Should perform a build stage.\n- Runs the distribution files using caddy."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-ce3ac290-a575-41ad-bf08-14b921a85760",
+      "data": {
+        "kind": "phase",
+        "title": "Database"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-1dd050c4-9149-4b8c-a13a-74b9648bfec8",
+      "data": {
+        "kind": "directive",
+        "title": "Use Drizzle for ORM",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:41:33.274Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038491253-urq3anvvx",
+            "url": "https://orm.drizzle.team/llms.txt",
+            "title": "LLMS.txt for Drizzle",
+            "createdAt": "2025-11-25T02:41:31.253Z",
+            "updatedAt": "2025-11-25T02:41:31.253Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-2c28087b-544a-40c4-a873-14b9cd9e00f3",
+      "data": {
+        "kind": "step",
+        "title": "Support SQLite by default for local development.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:08:59.717Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-cc870957-b2c7-453f-879d-f151142c1227",
+      "data": {
+        "kind": "step",
+        "title": "Support PostgresQL for deployment and local configuration",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:09:35.481Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-eb0cbca0-39fa-48d8-84d0-6bee312caf38",
+      "data": {
+        "kind": "phase",
+        "title": "User Authentication"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-b4f742c1-638f-4742-8e41-bdc278f403f6",
+      "data": {
+        "kind": "directive",
+        "title": "Utilize Better Auth for managing accounts and authentication.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:43:56.189Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038633920-k05q2xq6j",
+            "url": "https://www.better-auth.com/llms.txt",
+            "title": "LLMS.txt for Better Auth",
+            "createdAt": "2025-11-25T02:43:53.920Z",
+            "updatedAt": "2025-11-25T02:43:53.920Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-fb900a4b-982d-449a-a016-691aa59b70de",
+      "data": {
+        "kind": "step",
+        "title": "Set up necessary drizzle migrations to support Better Auth",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:49:51.472Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-dadc9471-51bd-4426-a12d-d07e27c66e65",
+      "data": {
+        "kind": "phase",
+        "title": "Subscriptions"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-9c4a7b1c-59f4-4f2a-a8f9-4adc6fb98efb",
+      "data": {
+        "kind": "directive",
+        "title": "Stripe payments will be supported.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:45:18.739Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038717304-zdxfvhwgh",
+            "url": "https://docs.stripe.com/llms.txt",
+            "title": "LLMS.txt for Stripe",
+            "createdAt": "2025-11-25T02:45:17.304Z",
+            "updatedAt": "2025-11-25T02:45:17.304Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-675ea3cf-34cf-4df1-9611-18095197ac38",
+      "data": {
+        "kind": "step",
+        "title": "Set up necessary drizzle migrations to handle subscription tracking.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:50:23.405Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e2c25608-35dc-4b6c-960d-53c3b0ec2561",
+      "data": {
+        "kind": "step",
+        "title": "Support a trial subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:54:36.955Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e36f341f-7676-4a6e-9118-4cd4c7c52645",
+      "data": {
+        "kind": "step",
+        "title": "Support a pro user subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:54:44.456Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-bf581aa4-74e0-4b37-87f6-66f811d8a227",
+      "data": {
+        "kind": "step",
+        "title": "Support cancelling subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:23:31.402Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-d1544e2f-48de-42f1-aae7-9eab77fdc6ff",
+      "data": {
+        "kind": "step",
+        "title": "For the baseline, set up necessary environment variables for testing with Stripe.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:24:05.338Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e0747a71-7d80-42bb-a7a9-2dfcd7d8404a",
+      "data": {
+        "kind": "phase",
+        "title": "Testing"
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T03:02:42.987Z",
+        "finalRequirements": "The tests after this phase will be implemented, but the order may need to be adjusted to ensure certain conditions for testing are met, for example, testing login with a user, requires creation of a user account to occur."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-d64b47f5-c2ed-4bb6-a1f5-6366e914c70f",
+      "data": {
+        "kind": "step",
+        "title": "Access the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-5aac78bc-6db7-413f-8d05-b37e511a83dd",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign in button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e17104d0-0662-421b-9291-21362a78059b",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign up button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a9d2bac0-6fe0-4f22-a834-4b49e2c1af32",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a dashboard button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-deeda5a6-5d9b-4ef0-9404-11a431f1f2ba",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a sign out button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-041ad419-cc38-4643-a7f7-6a33643d89d2",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign in button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c1a0f5f1-6803-4f80-bb13-83947a930995",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign up button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e6c3da73-0072-4bc6-94c0-ad340a9d4f73",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a dashboard button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-49211685-4961-4f21-9dc5-bad6384c6021",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a sign out button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-7bd91492-f63a-4b01-b575-71790cd8a59f",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign up workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-5d3d26f0-e0b2-4940-8f9e-ea249cdedca5",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign in workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c2c45e64-1e3a-4f9a-8c59-60e004fcfc0c",
+      "data": {
+        "kind": "step",
+        "title": "Performing a sign in with random credentials errors without allowing access to protected routes.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T03:03:55.456Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-558caf01-fb88-4b77-8846-368f8a9e587d",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign out workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-cc3cdd72-0b63-4919-9052-d0289b91a949",
+      "data": {
+        "kind": "step",
+        "title": "Access a protected route to ensure denial when not logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f614efb4-538b-43fe-97e6-01faff9b9e7d",
+      "data": {
+        "kind": "step",
+        "title": "Access an unprotected route to ensure access without login."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-8aa77801-0332-42e7-a785-82486b074510",
+      "data": {
+        "kind": "step",
+        "title": "Access a protected route to ensure access when logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f27971ed-f2d6-469b-9a1e-99f52b474698",
+      "data": {
+        "kind": "step",
+        "title": "Access an unprotected route to ensure access while logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f0913c24-e4c8-464a-a006-abc294730305",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can subscribe if not subscribed."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-7d972c43-f4c6-4ecd-95b6-f2adf917e1e2",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can cancel subscription if subscribed."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-228f52ee-6b9d-4b46-b246-fc846a4e3e4b",
+      "data": {
+        "kind": "step",
+        "title": "Subscribe to a trial."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-2283139a-43f8-4fcf-ae61-d5784bef3528",
+      "data": {
+        "kind": "step",
+        "title": "Cancel trial subscription."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-de403fd7-825a-4a8a-a1e5-747a1cd62777",
+      "data": {
+        "kind": "step",
+        "title": "Subscribe to pro and complete as a test."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-33134de6-01f0-4867-96b7-2fe15c68d464",
+      "data": {
+        "kind": "step",
+        "title": "Cancel pro subscription."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a29a3278-360a-4266-8026-ec1d652ea8cc",
+      "data": {
+        "kind": "step",
+        "title": "The settings page for the user is accessible."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a82dc722-d336-4b8c-9fb5-244ea16ce5b1",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can update their password."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node-a67f3a6e-4f25-4f05-a222-572d428af5b7",
+      "data": {
+        "kind": "start",
+        "title": "Start"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-9e062fa0-e59f-4f81-b2e1-3ef39c56a7a9",
+      "data": {
+        "kind": "phase",
+        "title": "Documentation"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-8c67df56-be10-42f1-a80d-7fefdc85558a",
+      "data": {
+        "kind": "directive",
+        "title": "Use docusaurus to support a static site for documentation.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:10:43.050Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-dacd7816-994c-4e0a-97c5-15600ac40b95",
+      "data": {
+        "kind": "step",
+        "title": "Support building and running via Dockerfile.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:20:57.618Z",
+        "finalRequirements": "- Should perform a build stage.\n- Runs the distribution files using caddy."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c11119ff-e996-402a-829b-da215feae6af",
+      "data": {
+        "kind": "phase",
+        "title": "Application"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c879f305-062b-403f-b071-5a4be8809da8",
+      "data": {
+        "kind": "directive",
+        "title": "Use next.js 16+ for the application framework",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:10:04.100Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-38b6f9d6-d4c1-42a1-af36-c5ebbc864647",
+      "data": {
+        "kind": "directive",
+        "title": "Set up the application to use vitest for testing.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:23:10.353Z",
+        "finalRequirements": "Tests noted as a Measure type in this flow will have a corresponding vitest."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-183f20bf-781d-4802-9835-2be830051b33",
+      "data": {
+        "kind": "directive",
+        "title": "Utilize Chakra UI components version 3 or greater",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:46:55.223Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038814120-ijoek0hhn",
+            "url": "https://chakra-ui.com/llms.txt",
+            "title": "LLMS.txt for Chakra UI",
+            "createdAt": "2025-11-25T02:46:54.120Z",
+            "updatedAt": "2025-11-25T02:46:54.120Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-20acce2a-0de5-4ca0-992f-21689c457891",
+      "data": {
+        "kind": "step",
+        "title": "Set up a drizzle migration to track settings for each user.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:50:53.406Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f71f2cfd-f587-42e2-b654-9769e9c45fbe",
+      "data": {
+        "kind": "step",
+        "title": "Support building and running via Dockerfile",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:48:08.110Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038887186-91vpe58db",
+            "url": "https://docs.docker.com/llms.txt",
+            "title": "LLMS.txt for Docker",
+            "createdAt": "2025-11-25T02:48:07.186Z",
+            "updatedAt": "2025-11-25T02:48:07.186Z"
+          }
+        ],
+        "finalRequirements": "- Should perform a build stage.\n- Runs the distribution files using caddy."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-ce3ac290-a575-41ad-bf08-14b921a85760",
+      "data": {
+        "kind": "phase",
+        "title": "Database"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-1dd050c4-9149-4b8c-a13a-74b9648bfec8",
+      "data": {
+        "kind": "directive",
+        "title": "Use Drizzle for ORM",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:41:33.274Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038491253-urq3anvvx",
+            "url": "https://orm.drizzle.team/llms.txt",
+            "title": "LLMS.txt for Drizzle",
+            "createdAt": "2025-11-25T02:41:31.253Z",
+            "updatedAt": "2025-11-25T02:41:31.253Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-2c28087b-544a-40c4-a873-14b9cd9e00f3",
+      "data": {
+        "kind": "step",
+        "title": "Support SQLite by default for local development.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:08:59.717Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-cc870957-b2c7-453f-879d-f151142c1227",
+      "data": {
+        "kind": "step",
+        "title": "Support PostgresQL for deployment and local configuration",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T00:09:35.481Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-eb0cbca0-39fa-48d8-84d0-6bee312caf38",
+      "data": {
+        "kind": "phase",
+        "title": "User Authentication"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-b4f742c1-638f-4742-8e41-bdc278f403f6",
+      "data": {
+        "kind": "directive",
+        "title": "Utilize Better Auth for managing accounts and authentication.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:43:56.189Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038633920-k05q2xq6j",
+            "url": "https://www.better-auth.com/llms.txt",
+            "title": "LLMS.txt for Better Auth",
+            "createdAt": "2025-11-25T02:43:53.920Z",
+            "updatedAt": "2025-11-25T02:43:53.920Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-fb900a4b-982d-449a-a016-691aa59b70de",
+      "data": {
+        "kind": "step",
+        "title": "Set up necessary drizzle migrations to support Better Auth",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:49:51.472Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-dadc9471-51bd-4426-a12d-d07e27c66e65",
+      "data": {
+        "kind": "phase",
+        "title": "Subscriptions"
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-9c4a7b1c-59f4-4f2a-a8f9-4adc6fb98efb",
+      "data": {
+        "kind": "directive",
+        "title": "Stripe payments will be supported.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:45:18.739Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764038717304-zdxfvhwgh",
+            "url": "https://docs.stripe.com/llms.txt",
+            "title": "LLMS.txt for Stripe",
+            "createdAt": "2025-11-25T02:45:17.304Z",
+            "updatedAt": "2025-11-25T02:45:17.304Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-675ea3cf-34cf-4df1-9611-18095197ac38",
+      "data": {
+        "kind": "step",
+        "title": "Set up necessary drizzle migrations to handle subscription tracking.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:50:23.405Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e2c25608-35dc-4b6c-960d-53c3b0ec2561",
+      "data": {
+        "kind": "step",
+        "title": "Support a trial subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:54:36.955Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e36f341f-7676-4a6e-9118-4cd4c7c52645",
+      "data": {
+        "kind": "step",
+        "title": "Support a pro user subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:54:44.456Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-bf581aa4-74e0-4b37-87f6-66f811d8a227",
+      "data": {
+        "kind": "step",
+        "title": "Support cancelling subscription.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:23:31.402Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-d1544e2f-48de-42f1-aae7-9eab77fdc6ff",
+      "data": {
+        "kind": "step",
+        "title": "For the baseline, set up necessary environment variables for testing with Stripe.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T02:24:05.338Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e0747a71-7d80-42bb-a7a9-2dfcd7d8404a",
+      "data": {
+        "kind": "phase",
+        "title": "Testing"
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T03:02:42.987Z",
+        "finalRequirements": "The tests after this phase will be implemented, but the order may need to be adjusted to ensure certain conditions for testing are met, for example, testing login with a user, requires creation of a user account to occur."
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-d64b47f5-c2ed-4bb6-a1f5-6366e914c70f",
+      "data": {
+        "kind": "step",
+        "title": "Access the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-5aac78bc-6db7-413f-8d05-b37e511a83dd",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign in button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e17104d0-0662-421b-9291-21362a78059b",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign up button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a9d2bac0-6fe0-4f22-a834-4b49e2c1af32",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a dashboard button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-deeda5a6-5d9b-4ef0-9404-11a431f1f2ba",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a sign out button on the main page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-041ad419-cc38-4643-a7f7-6a33643d89d2",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign in button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c1a0f5f1-6803-4f80-bb13-83947a930995",
+      "data": {
+        "kind": "step",
+        "title": "When not logged in, there is a sign up button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-e6c3da73-0072-4bc6-94c0-ad340a9d4f73",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a dashboard button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-49211685-4961-4f21-9dc5-bad6384c6021",
+      "data": {
+        "kind": "step",
+        "title": "When logged in, there is a sign out button on the dashboard page."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-7bd91492-f63a-4b01-b575-71790cd8a59f",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign up workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-5d3d26f0-e0b2-4940-8f9e-ea249cdedca5",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign in workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-c2c45e64-1e3a-4f9a-8c59-60e004fcfc0c",
+      "data": {
+        "kind": "step",
+        "title": "Performing a sign in with random credentials errors without allowing access to protected routes.",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-25T03:03:55.456Z"
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-558caf01-fb88-4b77-8846-368f8a9e587d",
+      "data": {
+        "kind": "step",
+        "title": "Perform a sign out workflow."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-cc3cdd72-0b63-4919-9052-d0289b91a949",
+      "data": {
+        "kind": "step",
+        "title": "Access a protected route to ensure denial when not logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f614efb4-538b-43fe-97e6-01faff9b9e7d",
+      "data": {
+        "kind": "step",
+        "title": "Access an unprotected route to ensure access without login."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-8aa77801-0332-42e7-a785-82486b074510",
+      "data": {
+        "kind": "step",
+        "title": "Access a protected route to ensure access when logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f27971ed-f2d6-469b-9a1e-99f52b474698",
+      "data": {
+        "kind": "step",
+        "title": "Access an unprotected route to ensure access while logged in."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-f0913c24-e4c8-464a-a006-abc294730305",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can subscribe if not subscribed."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-7d972c43-f4c6-4ecd-95b6-f2adf917e1e2",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can cancel subscription if subscribed."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-228f52ee-6b9d-4b46-b246-fc846a4e3e4b",
+      "data": {
+        "kind": "step",
+        "title": "Subscribe to a trial."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-2283139a-43f8-4fcf-ae61-d5784bef3528",
+      "data": {
+        "kind": "step",
+        "title": "Cancel trial subscription."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-de403fd7-825a-4a8a-a1e5-747a1cd62777",
+      "data": {
+        "kind": "step",
+        "title": "Subscribe to pro and complete as a test."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-33134de6-01f0-4867-96b7-2fe15c68d464",
+      "data": {
+        "kind": "step",
+        "title": "Cancel pro subscription."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a29a3278-360a-4266-8026-ec1d652ea8cc",
+      "data": {
+        "kind": "step",
+        "title": "The settings page for the user is accessible."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "node-a82dc722-d336-4b8c-9fb5-244ea16ce5b1",
+      "data": {
+        "kind": "step",
+        "title": "On the settings page, a user can update their password."
+      },
+      "type": "flowNode",
+      "context": {},
+      "itemType": "node",
+      "parentId": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "groups": [],
+  "cambigo": {
+    "document": "2",
+    "application": "1.7.2"
+  },
+  "version": "1.0",
+  "schemaContext": {
+    "schemaVersion": "https://cambigo.com/schemas/flow-document-v2.json",
+    "schemaUrl": "https://cambigo.com/schemas/flow-document-v2.json",
+    "documentDescription": "JSON Schema for Cambigo flow document import/export format. This schema defines the structure of workflow processes, including nodes (steps), groups (connections), and metadata.",
+    "howToReadThisDocument": "This is a Cambigo Flow Document in JSON format. It represents a workflow process with sequential and branching steps.\n\nKey sections:\n- \"metadata\": Contains document information (title, version, author, dates, etc.)\n- \"items\": An ordered list of all nodes and groups in the canonical flow order\n- \"nodes\": All step/action items in the workflow\n- \"groups\": All connections between nodes (representing flow control like alternatives, exceptions, repeating sections)\n\nEach node has:\n- \"data.kind\": The type of step (see nodeKinds below for meanings)\n- \"data.title\": The step name\n- \"context\": Extended information including descriptions, notes, flags, dispositions, and more\n\nEach group has:\n- \"data.kind\": The type of connection (see groupKinds below for meanings)\n- \"source\" and \"target\": IDs of connected nodes\n\nFor detailed field descriptions, refer to the \"schemaContext\" object included in this document.",
+    "topLevelProperties": [
+      {
+        "property": "$schema",
+        "description": "JSON Schema reference URL for validation and documentation. Points to this schema's canonical location. This field is included in exports to help tools and AI agents validate and understand the document structure. Ignored on import.",
+        "type": "string",
+        "required": false
+      },
+      {
+        "property": "cambigo_doc_version",
+        "description": "Version of the Cambigo document format specification. Current version is '2'.",
+        "type": "string",
+        "required": true
+      },
+      {
+        "property": "cambigo_app_version",
+        "description": "Version of the Cambigo application that created or last modified this document.",
+        "type": "string",
+        "required": true
+      },
+      {
+        "property": "items",
+        "description": "Ordered list of all nodes and groups in canonical order as they appear in the flow.",
+        "type": "array",
+        "required": true
+      },
+      {
+        "property": "nodes",
+        "description": "All node items (steps, actions, notifications, etc.) in the flow.",
+        "type": "array",
+        "required": true
+      },
+      {
+        "property": "groups",
+        "description": "All group items (connections between nodes) in the flow.",
+        "type": "array",
+        "required": true
+      },
+      {
+        "property": "attachmentData",
+        "description": "Map of attachment IDs to their base64-encoded data. This separates large binary data from the main flow structure to optimize data transfer. Only loaded when explicitly needed (e.g., for export or viewing).",
+        "type": "object",
+        "required": false
+      },
+      {
+        "property": "schemaContext",
+        "description": "Schema context information extracted from this JSON schema to help AI agents understand and interpret the flow document. Contains descriptions of all properties, definitions, enums, and their meanings. This field is automatically generated during export and ignored on import. It provides self-documenting capabilities for exported flows.",
+        "type": "object",
+        "required": false
+      },
+      {
+        "property": "cambigo",
+        "description": "Legacy version information retained for backward compatibility.",
+        "type": "object",
+        "required": false
+      },
+      {
+        "property": "version",
+        "description": "Legacy version field retained for backward compatibility.",
+        "type": "string",
+        "required": false
+      }
+    ],
+    "definitions": [
+      {
+        "name": "Metadata",
+        "description": "Document metadata including title, description, versioning, and document status information.",
+        "properties": [
+          {
+            "property": "id",
+            "description": "Unique identifier for this flow document.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "version",
+            "description": "Document version in semantic versioning format (e.g., '1.0', '2.3'). Incremented on each export.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "title",
+            "description": "Human-readable title of the flow document.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "description",
+            "description": "Optional detailed description of the flow's purpose and scope.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "aiDescription",
+            "description": "AI-friendly description automatically added on export to help AI agents understand the document format and structure. Explains what a Cambigo flow document is, its key sections, and how to interpret the data. This field is informational only and ignored on import.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "createdAt",
+            "description": "ISO 8601 timestamp when the document was first created.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "updatedAt",
+            "description": "ISO 8601 timestamp when the document was last modified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "author",
+            "description": "Name or identifier of the document author.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "author_id",
+            "description": "Unique identifier for the author in the system.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "status",
+            "description": "Current status or disposition of the document.",
+            "type": "Dispositions",
+            "required": false
+          },
+          {
+            "property": "tags",
+            "description": "Array of tags for categorizing and organizing the flow.",
+            "type": "array",
+            "required": false
+          },
+          {
+            "property": "state",
+            "description": "Current workflow state of the document.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "previous",
+            "description": "Reference to a previous version or related document.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "theme",
+            "description": "Visual theme applied when rendering the document.",
+            "type": "DocumentTheme",
+            "required": false
+          },
+          {
+            "property": "offlineOnly",
+            "description": "When true, indicates this document is for local/offline use only and should not sync to online database.",
+            "type": "boolean",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Item",
+        "description": "A flow item can be either a NodeItem (step) or GroupItem (connection).",
+        "properties": []
+      },
+      {
+        "name": "NodeItem",
+        "description": "A node represents a step or action in the flow. It includes position, type, data, and context information.",
+        "properties": [
+          {
+            "property": "itemType",
+            "description": "Discriminator field to identify this as a node item.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "id",
+            "description": "Unique identifier for the node, typically prefixed with 'node-'.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "position",
+            "description": "X and Y coordinates for positioning the node in the flow diagram.",
+            "type": "Position",
+            "required": true
+          },
+          {
+            "property": "type",
+            "description": "React Flow node type identifier.",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "flowNode",
+              "node"
+            ]
+          },
+          {
+            "property": "context",
+            "description": "Extended context information including descriptions, notes, flags, and interview data.",
+            "type": "ItemContext",
+            "required": true
+          },
+          {
+            "property": "parentId",
+            "description": "ID of the parent node, used to track the flow hierarchy and connections.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "layoutDirection",
+            "description": "Layout direction: 'TB' for top-to-bottom, 'LR' for left-to-right.",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "TB",
+              "LR"
+            ]
+          },
+          {
+            "property": "selected",
+            "description": "Whether this node is currently selected in the UI.",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "property": "dragging",
+            "description": "Whether this node is currently being dragged.",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "property": "width",
+            "description": "Width of the node element in pixels.",
+            "type": "number",
+            "required": false
+          },
+          {
+            "property": "height",
+            "description": "Height of the node element in pixels.",
+            "type": "number",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "GroupItem",
+        "description": "A group represents a connection or edge between nodes in the flow. Groups can be direct connections or branching paths (alternative, exception, repeating).",
+        "properties": [
+          {
+            "property": "itemType",
+            "description": "Discriminator field to identify this as a group item.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "id",
+            "description": "Unique identifier for the group, typically prefixed with 'group-'.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "type",
+            "description": "React Flow edge type identifier.",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "flowGroup",
+              "group"
+            ]
+          },
+          {
+            "property": "source",
+            "description": "ID of the source node where this connection originates.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "target",
+            "description": "ID of the target node where this connection ends.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "context",
+            "description": "Extended context information for the connection.",
+            "type": "ItemContext",
+            "required": true
+          },
+          {
+            "property": "parentId",
+            "description": "ID of the parent node for this group connection.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "animated",
+            "description": "Whether the edge should be animated in the UI.",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "property": "selected",
+            "description": "Whether this group is currently selected in the UI.",
+            "type": "boolean",
+            "required": false
+          },
+          {
+            "property": "sourceX",
+            "description": "X coordinate of the source connection point.",
+            "type": "number",
+            "required": false
+          },
+          {
+            "property": "sourceY",
+            "description": "Y coordinate of the source connection point.",
+            "type": "number",
+            "required": false
+          },
+          {
+            "property": "targetX",
+            "description": "X coordinate of the target connection point.",
+            "type": "number",
+            "required": false
+          },
+          {
+            "property": "targetY",
+            "description": "Y coordinate of the target connection point.",
+            "type": "number",
+            "required": false
+          },
+          {
+            "property": "sourcePosition",
+            "description": "Position of the source handle on the source node.",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "top",
+              "right",
+              "bottom",
+              "left"
+            ]
+          },
+          {
+            "property": "targetPosition",
+            "description": "Position of the target handle on the target node.",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "top",
+              "right",
+              "bottom",
+              "left"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ItemData",
+        "description": "Core data for any flow item (node or group), including the kind and title.",
+        "properties": [
+          {
+            "property": "kind",
+            "description": "The type/category of the item. Can be a NodeKind for nodes or GroupKind for groups.",
+            "required": true
+          },
+          {
+            "property": "title",
+            "description": "Display title or label for the item.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ItemContext",
+        "description": "Extended context information for nodes and groups, including descriptions, notes, flags, dispositions, and interview details.",
+        "properties": [
+          {
+            "property": "description",
+            "description": "Detailed description of this step or connection.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "notes",
+            "description": "Additional notes or comments about this item.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "notificationMethod",
+            "description": "Method of notification for this step (e.g., email, verbal, sms, slack, teams).",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "systemName",
+            "description": "Name of the system involved in this step (e.g., EHR, Application, Word, Excel, Jira).",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "actor",
+            "description": "Person, role, or title responsible for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "flags",
+            "description": "Array of flags marking this item for review, concerns, changes, problems, or removal.",
+            "type": "array",
+            "required": false
+          },
+          {
+            "property": "disposition",
+            "description": "Array of dispositions indicating the status of this item (draft, discussed, confirmed, complete, final).",
+            "type": "array",
+            "required": false
+          },
+          {
+            "property": "flagsContext",
+            "description": "Additional context or explanation for any applied flags.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "interviewDate",
+            "description": "Date when an interview or discussion about this item took place.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "interviewParticipants",
+            "description": "Names or roles of participants in the interview.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "interviewNotes",
+            "description": "Notes from the interview or discussion session.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "finalRequirements",
+            "description": "Finalized requirements for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "finalAcquisition",
+            "description": "Finalized acquisition details or data sources.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "finalPolicy",
+            "description": "Relevant policy information for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "finalProcedure",
+            "description": "Detailed procedure documentation for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "dataInput",
+            "description": "Description of data inputs required for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "dataOutput",
+            "description": "Description of data outputs produced by this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "dataSample",
+            "description": "Sample data or examples for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "dataValidation",
+            "description": "Validation rules or criteria for data in this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "schemaInformation",
+            "description": "Schema or data structure information for this step.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "attachments",
+            "description": "File attachments related to this item (images, documents, etc.).",
+            "type": "array",
+            "required": false
+          },
+          {
+            "property": "referenceLinks",
+            "description": "Reference links related to this item (URLs, documentation links, etc.).",
+            "type": "array",
+            "required": false
+          },
+          {
+            "property": "updatedAt",
+            "description": "ISO 8601 timestamp when this item was last updated. Used for visual indicators of recently updated steps.",
+            "type": "string",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "Position",
+        "description": "X and Y coordinates for positioning an element in the flow diagram.",
+        "properties": [
+          {
+            "property": "x",
+            "description": "Horizontal position in pixels.",
+            "type": "number",
+            "required": true
+          },
+          {
+            "property": "y",
+            "description": "Vertical position in pixels.",
+            "type": "number",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "NodeKind",
+        "description": "Type of node in the flow. Different kinds have different visual representations and semantic meanings.",
+        "properties": []
+      },
+      {
+        "name": "GroupKind",
+        "description": "Type of connection between nodes. Different kinds represent different flow control patterns.",
+        "properties": []
+      },
+      {
+        "name": "Flags",
+        "description": "Flags to mark items requiring attention or action.",
+        "properties": []
+      },
+      {
+        "name": "Dispositions",
+        "description": "Status or disposition of an item in the workflow process.",
+        "properties": []
+      },
+      {
+        "name": "DocumentTheme",
+        "description": "Visual theme for rendering the flow document.",
+        "properties": []
+      },
+      {
+        "name": "FileAttachment",
+        "description": "A file attached to an item, used for reference or export (e.g., images). The base64Data is now stored separately in the attachmentData field of the flow document for optimization.",
+        "properties": [
+          {
+            "property": "id",
+            "description": "Unique identifier for the attachment.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "title",
+            "description": "User-editable title/caption for the attachment.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "fileName",
+            "description": "Original file name.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "fileSize",
+            "description": "Size in bytes.",
+            "type": "number",
+            "required": true
+          },
+          {
+            "property": "fileType",
+            "description": "MIME type of the file.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "fileExtension",
+            "description": "File extension (e.g., 'png', 'jpg').",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "base64Data",
+            "description": "DEPRECATED: Base64 encoded file content. For backward compatibility only. New implementations should reference attachmentData in the flow document root.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "hash",
+            "description": "SHA-256 hash of the base64 data for deduplication and integrity verification.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "createdAt",
+            "description": "ISO 8601 timestamp when the attachment was created.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "updatedAt",
+            "description": "ISO 8601 timestamp when the attachment was last modified.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "ReferenceLink",
+        "description": "A reference link attached to an item for documentation or external resources. URLs are never rendered as clickable links for security reasons.",
+        "properties": [
+          {
+            "property": "id",
+            "description": "Unique identifier for the reference link.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "title",
+            "description": "User-editable title for the reference.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "url",
+            "description": "The URL of the reference. Never rendered as clickable link for security.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "notes",
+            "description": "Optional notes about the reference link.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "createdAt",
+            "description": "ISO 8601 timestamp when the reference link was created.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "updatedAt",
+            "description": "ISO 8601 timestamp when the reference link was last modified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "property": "lastCheckedAt",
+            "description": "ISO 8601 timestamp when the link validity was last checked.",
+            "type": "string",
+            "required": false
+          },
+          {
+            "property": "isValid",
+            "description": "Result of last link validity check. true = valid, false = invalid, undefined = not checked.",
+            "type": "boolean",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "nodeKinds": {
+      "step": "Default step in the flow representing a standard activity or task.",
+      "action": "Interaction that must occur with a system or application.",
+      "notification": "Communication to start, continue, or complete work (email, message, etc.).",
+      "measure": "Evaluation or assessment of progress, status, or quality.",
+      "external": "Steps taken outside of the main process or in another system.",
+      "placeholder": "Temporary placeholder for a step to be defined later.",
+      "start": "Starting point of the flow (typically only one per flow).",
+      "phase": "Major section of work to enhance understanding and organization.",
+      "context": "Contextual information, notes, or documentation about the flow.",
+      "variation": "Uncertain condition or variable that may occur in the process.",
+      "definition": "Used to describe a term.",
+      "directive": "Used to provide instruction to the implementer.",
+      "role": "Used to describe roles and/or responsibilities."
+    },
+    "groupKinds": {
+      "direct": "Standard sequential connection from one step to the next.",
+      "alternative": "Alternative path where optional steps may occur (branching).",
+      "exception": "Exception path taken when an issue or error occurs.",
+      "repeating": "Set of steps that may repeat multiple times (loop)."
+    },
+    "flags": {
+      "review": "Item needs review or verification.",
+      "problem": "Item has an identified problem that needs resolution.",
+      "change": "Item requires changes or modifications.",
+      "concern": "Item has a concern that should be addressed.",
+      "remove": "Item is marked for potential removal.",
+      "new": "Item is newly added and may need validation."
+    },
+    "dispositions": {
+      "discussed": "Item has been discussed with stakeholders.",
+      "confirmed": "Item has been confirmed and validated.",
+      "complete": "Item is complete and ready for use.",
+      "draft": "Item is in draft status and may change.",
+      "final": "Item is finalized and locked."
+    }
+  }
+}
