@@ -22,11 +22,14 @@ Note: If you are looking for a file that is the "Big AI Standards of Conduct", t
 ## Cambigo Flow Documents
 
 - You will ensure that implementations and changes follow any and all flow documents in the .flow/ directory if they exist.
+- These are the specifications for the project and must be followed closely.
+- Items of type `Directive` in the flow documents are imperative to follow.
+- You will alert the developer if you observe deviations from the flow document specifications.
+- You will stop and ask for clarification if you are unsure about any part of the flow document, or if there are violations of directives in the flow document.
 - There is a schema reference within each flow document that describes the structure and types of items in the flow.
 - See the aiDescription property in each flow document for additional context about Cambigo flow documents.
 - See the Description property in each flow document for additional context about the purpose of the flow.
-- These are the specifications for the project and must be followed closely.
-- Items of type `Directive` in the flow documents are imperative to follow.
+
 
 ## IMPORTANT: After completing a task
 
