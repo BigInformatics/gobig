@@ -4,11 +4,11 @@
   "cambigo_app_version": "1.7.2",
   "metadata": {
     "id": "1725167e-46e0-4daf-adcd-c9d66a91c96b",
-    "version": "1.0",
+    "version": "1.1",
     "title": "GoBig Application Starter Kit",
     "description": "This is the specification for the GoBig repository, and constructing the foundation of a full stack solution for building apps using Next.js.",
     "createdAt": "2025-11-25T00:04:00.815Z",
-    "updatedAt": "2025-11-25T03:03:55.456Z",
+    "updatedAt": "2025-11-25T03:47:57.780Z",
     "theme": "cambigo",
     "offlineOnly": false,
     "author": "Chris Compton",
@@ -480,13 +480,14 @@
     {
       "id": "node-d64b47f5-c2ed-4bb6-a1f5-6366e914c70f",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:46:50.714Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -495,13 +496,14 @@
     {
       "id": "node-5aac78bc-6db7-413f-8d05-b37e511a83dd",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign in button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:46:57.613Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -510,13 +512,14 @@
     {
       "id": "node-e17104d0-0662-421b-9291-21362a78059b",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign up button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:03.679Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -525,13 +528,14 @@
     {
       "id": "node-a9d2bac0-6fe0-4f22-a834-4b49e2c1af32",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a dashboard button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:08.096Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -540,13 +544,14 @@
     {
       "id": "node-deeda5a6-5d9b-4ef0-9404-11a431f1f2ba",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a sign out button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:12.313Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -555,13 +560,14 @@
     {
       "id": "node-041ad419-cc38-4643-a7f7-6a33643d89d2",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign in button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:16.978Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -570,13 +576,14 @@
     {
       "id": "node-c1a0f5f1-6803-4f80-bb13-83947a930995",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign up button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:21.895Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -585,13 +592,14 @@
     {
       "id": "node-e6c3da73-0072-4bc6-94c0-ad340a9d4f73",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a dashboard button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:26.997Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -600,13 +608,14 @@
     {
       "id": "node-49211685-4961-4f21-9dc5-bad6384c6021",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a sign out button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:31.612Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -615,13 +624,14 @@
     {
       "id": "node-7bd91492-f63a-4b01-b575-71790cd8a59f",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign up workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:36.030Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -630,13 +640,14 @@
     {
       "id": "node-5d3d26f0-e0b2-4940-8f9e-ea249cdedca5",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign in workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:40.812Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -645,13 +656,13 @@
     {
       "id": "node-c2c45e64-1e3a-4f9a-8c59-60e004fcfc0c",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Performing a sign in with random credentials errors without allowing access to protected routes.",
         "description": ""
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T03:03:55.456Z"
+        "updatedAt": "2025-11-25T03:47:45.795Z"
       },
       "itemType": "node",
       "position": {
@@ -662,13 +673,14 @@
     {
       "id": "node-558caf01-fb88-4b77-8846-368f8a9e587d",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign out workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:50.180Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -677,13 +689,14 @@
     {
       "id": "node-cc3cdd72-0b63-4919-9052-d0289b91a949",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access a protected route to ensure denial when not logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:54.354Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1320,13 +1333,14 @@
     {
       "id": "node-d64b47f5-c2ed-4bb6-a1f5-6366e914c70f",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:46:50.714Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1335,13 +1349,14 @@
     {
       "id": "node-5aac78bc-6db7-413f-8d05-b37e511a83dd",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign in button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:46:57.613Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1350,13 +1365,14 @@
     {
       "id": "node-e17104d0-0662-421b-9291-21362a78059b",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign up button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:03.679Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1365,13 +1381,14 @@
     {
       "id": "node-a9d2bac0-6fe0-4f22-a834-4b49e2c1af32",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a dashboard button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:08.096Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1380,13 +1397,14 @@
     {
       "id": "node-deeda5a6-5d9b-4ef0-9404-11a431f1f2ba",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a sign out button on the main page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:12.313Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1395,13 +1413,14 @@
     {
       "id": "node-041ad419-cc38-4643-a7f7-6a33643d89d2",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign in button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:16.978Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1410,13 +1429,14 @@
     {
       "id": "node-c1a0f5f1-6803-4f80-bb13-83947a930995",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When not logged in, there is a sign up button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:21.895Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1425,13 +1445,14 @@
     {
       "id": "node-e6c3da73-0072-4bc6-94c0-ad340a9d4f73",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a dashboard button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:26.997Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1440,13 +1461,14 @@
     {
       "id": "node-49211685-4961-4f21-9dc5-bad6384c6021",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "When logged in, there is a sign out button on the dashboard page."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:31.612Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1455,13 +1477,14 @@
     {
       "id": "node-7bd91492-f63a-4b01-b575-71790cd8a59f",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign up workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:36.030Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1470,13 +1493,14 @@
     {
       "id": "node-5d3d26f0-e0b2-4940-8f9e-ea249cdedca5",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign in workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:40.812Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1485,13 +1509,13 @@
     {
       "id": "node-c2c45e64-1e3a-4f9a-8c59-60e004fcfc0c",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Performing a sign in with random credentials errors without allowing access to protected routes.",
         "description": ""
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T03:03:55.456Z"
+        "updatedAt": "2025-11-25T03:47:45.795Z"
       },
       "itemType": "node",
       "position": {
@@ -1502,13 +1526,14 @@
     {
       "id": "node-558caf01-fb88-4b77-8846-368f8a9e587d",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Perform a sign out workflow."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:50.180Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1517,13 +1542,14 @@
     {
       "id": "node-cc3cdd72-0b63-4919-9052-d0289b91a949",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access a protected route to ensure denial when not logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-25T03:47:54.354Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1700,7 +1726,7 @@
     "document": "2",
     "application": "1.7.2"
   },
-  "version": "1.0",
+  "version": "1.1",
   "schemaContext": {
     "schemaVersion": "https://cambigo.com/schemas/flow-document-v2.json",
     "schemaUrl": "https://cambigo.com/schemas/flow-document-v2.json",
