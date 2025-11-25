@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  Avatar,
   Box,
   Button,
   Card,
@@ -18,25 +17,27 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
-import { Github, Lock, Mail, Calendar, Shield, Key } from 'lucide-react'
+import { Github, Lock, Mail } from 'lucide-react'
 import { authClient } from '@/lib/auth-client'
 import { useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import { Provider } from '@/components/ui/provider'
 
-function LoginPageContent() {
+function SignupPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [socialLoading, setSocialLoading] = useState<string | null>(null)
 
   const redirect = searchParams.get('redirect') || '/flow/dashboard'
 
-  const handleSocialLogin = async (provider: 'github' | 'google') => {
+  const handleSocialSignup = async (provider: 'github' | 'google') => {
     setError('')
     setSocialLoading(provider)
 
@@ -47,74 +48,67 @@ function LoginPageContent() {
       })
 
       if (result.error) {
-        console.error(`[Login] ${provider} error:`, result.error)
-        setError(result.error.message || `Failed to sign in with ${provider}`)
+        console.error(`[Signup] ${provider} error:`, result.error)
+        setError(result.error.message || `Failed to sign up with ${provider}`)
         setSocialLoading(null)
       } else {
         // OAuth flow will redirect automatically
-        // The redirect happens via the OAuth provider, so we don't need to handle it here
-        console.log(`[Login] ${provider} sign in initiated`)
+        console.log(`[Signup] ${provider} sign up initiated`)
       }
     } catch (err) {
-      console.error(`[Login] ${provider} exception:`, err)
+      console.error(`[Signup] ${provider} exception:`, err)
       setError(err instanceof Error ? err.message : `An unexpected error occurred with ${provider}`)
       setSocialLoading(null)
     }
   }
 
-  const handleEmailLogin = async (e: React.FormEvent) => {
+  const handleEmailSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
+
+    // Client-side validation
+    if (password !== confirmPassword) {
+      setError('Passwords do not match')
+      return
+    }
+
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters long')
+      return
+    }
+
     setIsLoading(true)
 
     try {
-      console.log('[Login] Attempting sign in with email:', email)
-      const result = await authClient.signIn.email({
+      console.log('[Signup] Attempting sign up with email:', email)
+      const result = await authClient.signUp.email({
         email,
         password,
+        name,
       })
 
-      console.log('[Login] Result:', result)
+      console.log('[Signup] Result:', result)
 
       if (result.error) {
-        console.error('[Login] Error:', result.error)
-        const errorMessage = result.error.message || 'Failed to sign in'
-        // Check if it's a connectivity error
+        console.error('[Signup] Error:', result.error)
+        const errorMessage = result.error.message || 'Failed to sign up'
         const isConnectivityError = errorMessage.toLowerCase().includes('network') || 
                                    errorMessage.toLowerCase().includes('fetch') ||
                                    errorMessage.toLowerCase().includes('connection')
         setError(isConnectivityError ? 'Connection failed. Please check your internet connection and try again.' : errorMessage)
       } else {
-        console.log('[Login] Success, result:', result)
-        console.log('[Login] Checking for session cookie...')
-        
-        // Check if cookie was set
-        const cookies = document.cookie
-        console.log('[Login] Current cookies:', cookies)
-        
-        // Try to get session from authClient
-        try {
-          const sessionCheck = await authClient.getSession()
-          console.log('[Login] Session check result:', sessionCheck)
-        } catch (err) {
-          console.error('[Login] Session check failed:', err)
-        }
+        console.log('[Signup] Success, result:', result)
         
         // Wait for cookie to be set and propagated
-        // HttpOnly cookies won't appear in document.cookie, so we need to wait
-        // and ensure the browser has processed the Set-Cookie header
         await new Promise(resolve => setTimeout(resolve, 1000))
         
-        // Use window.location for more reliable redirect with session cookie
-        // This ensures cookies are available when middleware runs
-        // Force a full page reload to ensure cookies are sent with the request
-        console.log('[Login] Redirecting to:', redirect)
+        // Redirect to dashboard
+        console.log('[Signup] Redirecting to:', redirect)
         window.location.href = redirect
       }
     } catch (err) {
-      console.error('[Login] Exception:', err)
+      console.error('[Signup] Exception:', err)
       const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred'
-      // Check if it's a connectivity error
       const isConnectivityError = errorMessage.toLowerCase().includes('network') || 
                                  errorMessage.toLowerCase().includes('fetch') ||
                                  errorMessage.toLowerCase().includes('connection') ||
@@ -131,7 +125,7 @@ function LoginPageContent() {
       <Box flex="1.5" py={{ base: '24', md: '32' }}>
         <Container maxW="md">
           <Stack gap="4" alignItems="center">
-            {/* Cambigo Logo */}
+            {/* Logo */}
             <Box>
               <Link href="/" display="inline-block">
                 <Image
@@ -145,27 +139,13 @@ function LoginPageContent() {
             </Box>
 
             <Stack gap={{ base: '1', md: '2' }} textAlign="center">
-              <Heading size={{ base: '2xl', md: '3xl' }}>Sign in to Cambigo</Heading>
+              <Heading size={{ base: '2xl', md: '3xl' }}>Create your account</Heading>
               <Text mb="4" color="fg.muted">Start building flows and planning your projects</Text>
             
-              {/* Sign Up Link */}
-              {/*
-              <Card.Root size="sm" mt="10">
-                <Card.Body>
-                  <HStack textStyle="sm" justifyContent="center">
-                    <Text>Want to try Cambigo?</Text>
-                    <Link variant="underline" href="/signup" fontWeight="semibold">
-                      <Calendar /> Book a demo
-                    </Link>
-                  </HStack>
-                </Card.Body>
-              </Card.Root>
-              */}
-
               <Text textStyle="sm" color="fg.muted" fontWeight="medium" textAlign="center">
-                Not a member?{' '}
-                <Link href="/signup" variant="underline">
-                  Create your account
+                Already have an account?{' '}
+                <Link href="/login" variant="underline">
+                  Sign in
                 </Link>
                 .
               </Text>
@@ -174,25 +154,25 @@ function LoginPageContent() {
             </Stack>
 
             <Stack gap="6" width="full">
-              {/* Social Login Options */}
+              {/* Social Signup Options */}
               <Stack gap="6" colorPalette="gray" width="full">
                 <Button
                   colorPalette="gray"
                   size="lg"
                   w="full"
-                  onClick={() => handleSocialLogin('github')}
+                  onClick={() => handleSocialSignup('github')}
                   loading={socialLoading === 'github'}
                   loadingText="Connecting..."
                   disabled={!!socialLoading}
                 >
                   <Github />
-                  Login with GitHub
+                  Sign up with GitHub
                 </Button>
                 <Button
                   colorPalette="blue"
                   size="lg"
                   w="full"
-                  onClick={() => handleSocialLogin('google')}
+                  onClick={() => handleSocialSignup('google')}
                   loading={socialLoading === 'google'}
                   loadingText="Connecting..."
                   disabled={!!socialLoading}
@@ -203,7 +183,7 @@ function LoginPageContent() {
                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                   </svg>
-                  Login with Google
+                  Sign up with Google
                 </Button>
               </Stack>
 
@@ -216,7 +196,7 @@ function LoginPageContent() {
               </HStack>
 
               {/* Email/Password Form */}
-              <form onSubmit={handleEmailLogin}>
+              <form onSubmit={handleEmailSignup}>
                 <Stack gap="5">
                   {error && (
                     <Card.Root size="sm" colorPalette="red">
@@ -228,7 +208,7 @@ function LoginPageContent() {
                               size="sm"
                               variant="outline"
                               colorPalette="red"
-                              onClick={handleEmailLogin}
+                              onClick={handleEmailSignup}
                               loading={isLoading}
                               width="full"
                             >
@@ -239,6 +219,22 @@ function LoginPageContent() {
                       </Card.Body>
                     </Card.Root>
                   )}
+
+                  <Field.Root>
+                    <Field.Label hideBelow="md">Name</Field.Label>
+                    <InputGroup startElement={<Mail />} flex="1">
+                      <Input
+                        type="text"
+                        autoComplete="name"
+                        placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        minH={{ base: "44px", md: "auto" }}
+                      />
+                    </InputGroup>
+                    <Field.ErrorText />
+                  </Field.Root>
 
                   <Field.Root>
                     <Field.Label hideBelow="md">Email</Field.Label>
@@ -262,10 +258,30 @@ function LoginPageContent() {
                     <InputGroup startElement={<Lock />} flex="1">
                       <Input
                         type="password"
-                        autoComplete="current-password"
+                        autoComplete="new-password"
                         placeholder="••••••••"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
+                        minLength={8}
+                        minH={{ base: "44px", md: "auto" }}
+                      />
+                    </InputGroup>
+                    <Field.HelperText color="fg.muted" textStyle="sm">
+                      Must be at least 8 characters
+                    </Field.HelperText>
+                    <Field.ErrorText />
+                  </Field.Root>
+
+                  <Field.Root>
+                    <Field.Label hideBelow="md">Confirm Password</Field.Label>
+                    <InputGroup startElement={<Lock />} flex="1">
+                      <Input
+                        type="password"
+                        autoComplete="new-password"
+                        placeholder="••••••••"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                         required
                         minH={{ base: "44px", md: "auto" }}
                       />
@@ -277,22 +293,17 @@ function LoginPageContent() {
                     type="submit"
                     size="lg"
                     loading={isLoading}
-                    loadingText="Signing in..."
+                    loadingText="Creating account..."
                     width="full"
                   >
-                    Sign in
+                    Create account
                   </Button>
 
-                  <Link variant="plain" href="/forgot-password" textAlign="center">
-                    Forgot password?
+                  <Link variant="plain" href="/login" textAlign="center">
+                    Already have an account? Sign in
                   </Link>
                 </Stack>
               </form>
-
-
-
-
-
             </Stack>
           </Stack>
         </Container>
@@ -344,7 +355,7 @@ function LoginPageContent() {
   )
 }
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <Suspense fallback={
       <Provider>
@@ -353,7 +364,7 @@ export default function LoginPage() {
         </Flex>
       </Provider>
     }>
-      <LoginPageContent />
+      <SignupPageContent />
     </Suspense>
   )
 }
