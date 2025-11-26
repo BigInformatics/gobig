@@ -3,12 +3,12 @@
   "cambigo_doc_version": "2",
   "cambigo_app_version": "1.7.2",
   "metadata": {
-    "id": "1725167e-46e0-4daf-adcd-c9d66a91c96b",
-    "version": "1.1",
+    "id": "2eec4f5a-339b-4935-9222-0c3e3fd71fba",
+    "version": "1.3",
     "title": "GoBig Application Starter Kit",
     "description": "This is the specification for the GoBig repository, and constructing the foundation of a full stack solution for building apps using Next.js.",
-    "createdAt": "2025-11-25T00:04:00.815Z",
-    "updatedAt": "2025-11-25T03:47:57.780Z",
+    "createdAt": "2025-11-26T02:47:04.623Z",
+    "updatedAt": "2025-11-26T02:54:42.940Z",
     "theme": "cambigo",
     "offlineOnly": false,
     "author": "Chris Compton",
@@ -32,6 +32,87 @@
       }
     },
     {
+      "id": "node-17aaf546-68e9-409c-9dff-2bbf33426949",
+      "data": {
+        "kind": "directive",
+        "title": "Intelligent Agent Support (AI)",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-26T02:45:13.963Z",
+        "description": "You will use the following references to understand and properly utilize the technologies used in this repository.",
+        "referenceLinks": [
+          {
+            "id": "reflink-1763848118783-ykmuh57a2",
+            "url": "https://effect.website/llms-full.txt",
+            "title": "Effect TS for LLMs",
+            "createdAt": "2025-11-22T21:48:38.783Z",
+            "updatedAt": "2025-11-22T21:48:38.783Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848344652-lwg1qskhk",
+            "url": "https://docs.astro.build/llms-full.txt",
+            "title": "Astro for LLMs",
+            "createdAt": "2025-11-22T21:52:24.652Z",
+            "updatedAt": "2025-11-22T21:52:24.652Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848385621-xxum2k2zn",
+            "url": "https://chakra-ui.com/llms-full.txt",
+            "title": "Chakra UI fro LLMs",
+            "createdAt": "2025-11-22T21:53:05.621Z",
+            "updatedAt": "2025-11-22T21:53:05.621Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848747076-yul9e5z3a",
+            "url": "https://www.better-auth.com/llms.txt",
+            "title": "Better Auth for LLMs",
+            "createdAt": "2025-11-22T21:59:07.076Z",
+            "updatedAt": "2025-11-22T22:14:22.363Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848796943-p1b107vjp",
+            "url": "https://docs.stripe.com/llms.txt",
+            "title": "Stripe for LLMs",
+            "createdAt": "2025-11-22T21:59:56.943Z",
+            "updatedAt": "2025-11-22T22:09:35.479Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763849469744-3hxd55xdg",
+            "url": "https://bun.sh/llms-full.txt",
+            "title": "Bun for LLMs",
+            "createdAt": "2025-11-22T22:11:09.744Z",
+            "updatedAt": "2025-11-22T22:11:09.744Z"
+          },
+          {
+            "id": "reflink-1763849625612-ctdy0fl8e",
+            "url": "https://docs.turso.tech/llms-full.txt",
+            "title": "Turso for LLMs",
+            "createdAt": "2025-11-22T22:13:45.612Z",
+            "updatedAt": "2025-11-22T22:13:45.612Z"
+          },
+          {
+            "id": "reflink-1763849787748-p7w72zjg3",
+            "url": "https://postmarkapp.com/llms.txt",
+            "title": "Postmark for LLMs",
+            "createdAt": "2025-11-22T22:16:27.748Z",
+            "updatedAt": "2025-11-22T22:16:27.748Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
       "id": "node-9e062fa0-e59f-4f81-b2e1-3ef39c56a7a9",
       "data": {
         "kind": "phase",
@@ -705,13 +786,14 @@
     {
       "id": "node-f614efb4-538b-43fe-97e6-01faff9b9e7d",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access an unprotected route to ensure access without login."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:37.742Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -720,13 +802,14 @@
     {
       "id": "node-8aa77801-0332-42e7-a785-82486b074510",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access a protected route to ensure access when logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:43.242Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -735,13 +818,14 @@
     {
       "id": "node-f27971ed-f2d6-469b-9a1e-99f52b474698",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access an unprotected route to ensure access while logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:47.826Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -750,13 +834,14 @@
     {
       "id": "node-f0913c24-e4c8-464a-a006-abc294730305",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can subscribe if not subscribed."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:34.127Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -765,13 +850,14 @@
     {
       "id": "node-7d972c43-f4c6-4ecd-95b6-f2adf917e1e2",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can cancel subscription if subscribed."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:38.792Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -780,13 +866,14 @@
     {
       "id": "node-228f52ee-6b9d-4b46-b246-fc846a4e3e4b",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Subscribe to a trial."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:54.093Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -795,13 +882,14 @@
     {
       "id": "node-2283139a-43f8-4fcf-ae61-d5784bef3528",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Cancel trial subscription."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:01.856Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -810,13 +898,14 @@
     {
       "id": "node-de403fd7-825a-4a8a-a1e5-747a1cd62777",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Subscribe to pro and complete as a test."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:12.260Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -825,13 +914,14 @@
     {
       "id": "node-33134de6-01f0-4867-96b7-2fe15c68d464",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Cancel pro subscription."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:16.742Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -840,13 +930,14 @@
     {
       "id": "node-a29a3278-360a-4266-8026-ec1d652ea8cc",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "The settings page for the user is accessible."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:22.241Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -855,13 +946,14 @@
     {
       "id": "node-a82dc722-d336-4b8c-9fb5-244ea16ce5b1",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can update their password."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:28.508Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -885,6 +977,87 @@
       }
     },
     {
+      "id": "node-17aaf546-68e9-409c-9dff-2bbf33426949",
+      "data": {
+        "kind": "directive",
+        "title": "Intelligent Agent Support (AI)",
+        "description": ""
+      },
+      "type": "flowNode",
+      "context": {
+        "updatedAt": "2025-11-26T02:45:13.963Z",
+        "description": "You will use the following references to understand and properly utilize the technologies used in this repository.",
+        "referenceLinks": [
+          {
+            "id": "reflink-1763848118783-ykmuh57a2",
+            "url": "https://effect.website/llms-full.txt",
+            "title": "Effect TS for LLMs",
+            "createdAt": "2025-11-22T21:48:38.783Z",
+            "updatedAt": "2025-11-22T21:48:38.783Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848344652-lwg1qskhk",
+            "url": "https://docs.astro.build/llms-full.txt",
+            "title": "Astro for LLMs",
+            "createdAt": "2025-11-22T21:52:24.652Z",
+            "updatedAt": "2025-11-22T21:52:24.652Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848385621-xxum2k2zn",
+            "url": "https://chakra-ui.com/llms-full.txt",
+            "title": "Chakra UI fro LLMs",
+            "createdAt": "2025-11-22T21:53:05.621Z",
+            "updatedAt": "2025-11-22T21:53:05.621Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848747076-yul9e5z3a",
+            "url": "https://www.better-auth.com/llms.txt",
+            "title": "Better Auth for LLMs",
+            "createdAt": "2025-11-22T21:59:07.076Z",
+            "updatedAt": "2025-11-22T22:14:22.363Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763848796943-p1b107vjp",
+            "url": "https://docs.stripe.com/llms.txt",
+            "title": "Stripe for LLMs",
+            "createdAt": "2025-11-22T21:59:56.943Z",
+            "updatedAt": "2025-11-22T22:09:35.479Z",
+            "lastCheckedAt": "2025-11-22T22:08:39.980Z"
+          },
+          {
+            "id": "reflink-1763849469744-3hxd55xdg",
+            "url": "https://bun.sh/llms-full.txt",
+            "title": "Bun for LLMs",
+            "createdAt": "2025-11-22T22:11:09.744Z",
+            "updatedAt": "2025-11-22T22:11:09.744Z"
+          },
+          {
+            "id": "reflink-1763849625612-ctdy0fl8e",
+            "url": "https://docs.turso.tech/llms-full.txt",
+            "title": "Turso for LLMs",
+            "createdAt": "2025-11-22T22:13:45.612Z",
+            "updatedAt": "2025-11-22T22:13:45.612Z"
+          },
+          {
+            "id": "reflink-1763849787748-p7w72zjg3",
+            "url": "https://postmarkapp.com/llms.txt",
+            "title": "Postmark for LLMs",
+            "createdAt": "2025-11-22T22:16:27.748Z",
+            "updatedAt": "2025-11-22T22:16:27.748Z"
+          }
+        ]
+      },
+      "itemType": "node",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
       "id": "node-9e062fa0-e59f-4f81-b2e1-3ef39c56a7a9",
       "data": {
         "kind": "phase",
@@ -1558,13 +1731,14 @@
     {
       "id": "node-f614efb4-538b-43fe-97e6-01faff9b9e7d",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access an unprotected route to ensure access without login."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:37.742Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1573,13 +1747,14 @@
     {
       "id": "node-8aa77801-0332-42e7-a785-82486b074510",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access a protected route to ensure access when logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:43.242Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1588,13 +1763,14 @@
     {
       "id": "node-f27971ed-f2d6-469b-9a1e-99f52b474698",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Access an unprotected route to ensure access while logged in."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:47:47.826Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1603,13 +1779,14 @@
     {
       "id": "node-f0913c24-e4c8-464a-a006-abc294730305",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can subscribe if not subscribed."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:34.127Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1618,13 +1795,14 @@
     {
       "id": "node-7d972c43-f4c6-4ecd-95b6-f2adf917e1e2",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can cancel subscription if subscribed."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:38.792Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1633,13 +1811,14 @@
     {
       "id": "node-228f52ee-6b9d-4b46-b246-fc846a4e3e4b",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Subscribe to a trial."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:53:54.093Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1648,13 +1827,14 @@
     {
       "id": "node-2283139a-43f8-4fcf-ae61-d5784bef3528",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Cancel trial subscription."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:01.856Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1663,13 +1843,14 @@
     {
       "id": "node-de403fd7-825a-4a8a-a1e5-747a1cd62777",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Subscribe to pro and complete as a test."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:12.260Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1678,13 +1859,14 @@
     {
       "id": "node-33134de6-01f0-4867-96b7-2fe15c68d464",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "Cancel pro subscription."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:16.742Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1693,13 +1875,14 @@
     {
       "id": "node-a29a3278-360a-4266-8026-ec1d652ea8cc",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "The settings page for the user is accessible."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:22.241Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1708,13 +1891,14 @@
     {
       "id": "node-a82dc722-d336-4b8c-9fb5-244ea16ce5b1",
       "data": {
-        "kind": "step",
+        "kind": "measure",
         "title": "On the settings page, a user can update their password."
       },
       "type": "flowNode",
-      "context": {},
+      "context": {
+        "updatedAt": "2025-11-26T02:54:28.508Z"
+      },
       "itemType": "node",
-      "parentId": "",
       "position": {
         "x": 0,
         "y": 0
@@ -1726,7 +1910,7 @@
     "document": "2",
     "application": "1.7.2"
   },
-  "version": "1.1",
+  "version": "1.3",
   "schemaContext": {
     "schemaVersion": "https://cambigo.com/schemas/flow-document-v2.json",
     "schemaUrl": "https://cambigo.com/schemas/flow-document-v2.json",
