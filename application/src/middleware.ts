@@ -37,18 +37,10 @@ export async function middleware(request: NextRequest) {
 
   if (isProtectedRoute) {
     try {
-      // Better Auth handles session validation via cookies
-      // We'll check the session by calling the auth API
-      const sessionResponse = await fetch(
-        new URL('/api/auth/session', request.url),
-        {
-          headers: {
-            cookie: request.headers.get('cookie') || '',
-          },
-        }
-      );
-
-      const session = await sessionResponse.json();
+      // Use Better Auth's server-side session API
+      const session = await auth.api.getSession({
+        headers: request.headers,
+      });
 
       if (!session?.user) {
         // Redirect to login with return URL
@@ -79,4 +71,6 @@ export const config = {
     '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
+
+
 

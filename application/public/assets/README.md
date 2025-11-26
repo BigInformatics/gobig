@@ -49,3 +49,5 @@ If these assets are not present, the pages will still function but will show bro
 
 The splash image uses a CSS class `cover-image-pan` which should be defined in your global CSS for any special styling effects.
 
+
+

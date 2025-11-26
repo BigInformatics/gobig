@@ -54,3 +54,5 @@ GOOGLE_CLIENT_SECRET=
 - `NEXT_PUBLIC_*` variables are exposed to the browser
 - OAuth providers are optional - the app works without them (email/password auth only)
 
+
+
