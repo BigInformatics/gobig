@@ -8,7 +8,7 @@
     "title": "GoBig Application Starter Kit",
     "description": "This is the specification for the GoBig repository, and constructing the foundation of a full stack solution for building apps using Next.js.",
     "createdAt": "2025-11-26T02:47:04.623Z",
-    "updatedAt": "2025-11-26T03:01:04.000Z",
+    "updatedAt": "2025-11-26T03:26:50.837Z",
     "theme": "cambigo",
     "offlineOnly": false,
     "author": "Chris Compton",
@@ -565,7 +565,11 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T03:02:42.987Z",
+        "dataInput": "Input data may be mocked to perform a unit test on a method, but should not be mocked when the test is verifying proper user interfaces like inputs, validations and forms.  Tests should submit information through the user interface where possible, and verify the expected input is received.",
+        "updatedAt": "2025-11-26T03:26:50.837Z",
+        "finalPolicy": "You are not just setting up tests to pass.  The point is that parts of the application not developed to address the tests will need to be identified and developed.  \n\nDo not simply mock everything to the point of passing - that is the incorrect approach.  The question is if the functionality exists, and is it set up properly based on the test-driven requirement.",
+        "dataValidation": "If you are performing an audit of tests, ensure that tests are not build to be a passing test by mocking all parts of the test.  This doesn't test the application or service being developed.\n\nReview tests to ensure they meet the requirement, and follow good development practices.  Attempts to create a passing test by being written in a way that the default is a pass means the test is insufficient.",
+        "finalProcedure": "Implement the test to address the requirement.  While building tests, you are not focused on implementation tasks.\n\nAs you develop tests, you can also build a TODO.md to track implementation that needs to be completed in the application to guide an agent in another session.",
         "finalRequirements": "The tests after this phase will be implemented, but the order may need to be adjusted to ensure certain conditions for testing are met, for example, testing login with a user, requires creation of a user account to occur."
       },
       "itemType": "node",
@@ -1526,7 +1530,11 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T03:02:42.987Z",
+        "dataInput": "Input data may be mocked to perform a unit test on a method, but should not be mocked when the test is verifying proper user interfaces like inputs, validations and forms.  Tests should submit information through the user interface where possible, and verify the expected input is received.",
+        "updatedAt": "2025-11-26T03:26:50.837Z",
+        "finalPolicy": "You are not just setting up tests to pass.  The point is that parts of the application not developed to address the tests will need to be identified and developed.  \n\nDo not simply mock everything to the point of passing - that is the incorrect approach.  The question is if the functionality exists, and is it set up properly based on the test-driven requirement.",
+        "dataValidation": "If you are performing an audit of tests, ensure that tests are not build to be a passing test by mocking all parts of the test.  This doesn't test the application or service being developed.\n\nReview tests to ensure they meet the requirement, and follow good development practices.  Attempts to create a passing test by being written in a way that the default is a pass means the test is insufficient.",
+        "finalProcedure": "Implement the test to address the requirement.  While building tests, you are not focused on implementation tasks.\n\nAs you develop tests, you can also build a TODO.md to track implementation that needs to be completed in the application to guide an agent in another session.",
         "finalRequirements": "The tests after this phase will be implemented, but the order may need to be adjusted to ensure certain conditions for testing are met, for example, testing login with a user, requires creation of a user account to occur."
       },
       "itemType": "node",
