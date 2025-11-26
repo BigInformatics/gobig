@@ -4,11 +4,11 @@
   "cambigo_app_version": "1.7.2",
   "metadata": {
     "id": "2eec4f5a-339b-4935-9222-0c3e3fd71fba",
-    "version": "1.3",
+    "version": "1.4",
     "title": "GoBig Application Starter Kit",
     "description": "This is the specification for the GoBig repository, and constructing the foundation of a full stack solution for building apps using Next.js.",
     "createdAt": "2025-11-26T02:47:04.623Z",
-    "updatedAt": "2025-11-26T02:54:42.940Z",
+    "updatedAt": "2025-11-26T03:01:04.000Z",
     "theme": "cambigo",
     "offlineOnly": false,
     "author": "Chris Compton",
@@ -40,7 +40,7 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-26T02:45:13.963Z",
+        "updatedAt": "2025-11-26T03:00:35.362Z",
         "description": "You will use the following references to understand and properly utilize the technologies used in this repository.",
         "referenceLinks": [
           {
@@ -103,6 +103,13 @@
             "title": "Postmark for LLMs",
             "createdAt": "2025-11-22T22:16:27.748Z",
             "updatedAt": "2025-11-22T22:16:27.748Z"
+          },
+          {
+            "id": "reflink-1764126030623-g62cnhwju",
+            "url": "https://nextjs.org/docs/llms.txt",
+            "title": "Next.js for LLMs",
+            "createdAt": "2025-11-26T03:00:30.623Z",
+            "updatedAt": "2025-11-26T03:00:30.623Z"
           }
         ]
       },
@@ -186,7 +193,16 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T00:10:04.100Z"
+        "updatedAt": "2025-11-26T03:00:51.757Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764126050689-a6906igh1",
+            "url": "https://nextjs.org/docs/llms.txt",
+            "title": "Next.js for LLMs.txt",
+            "createdAt": "2025-11-26T03:00:50.689Z",
+            "updatedAt": "2025-11-26T03:00:50.689Z"
+          }
+        ]
       },
       "itemType": "node",
       "position": {
@@ -985,7 +1001,7 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-26T02:45:13.963Z",
+        "updatedAt": "2025-11-26T03:00:35.362Z",
         "description": "You will use the following references to understand and properly utilize the technologies used in this repository.",
         "referenceLinks": [
           {
@@ -1048,6 +1064,13 @@
             "title": "Postmark for LLMs",
             "createdAt": "2025-11-22T22:16:27.748Z",
             "updatedAt": "2025-11-22T22:16:27.748Z"
+          },
+          {
+            "id": "reflink-1764126030623-g62cnhwju",
+            "url": "https://nextjs.org/docs/llms.txt",
+            "title": "Next.js for LLMs",
+            "createdAt": "2025-11-26T03:00:30.623Z",
+            "updatedAt": "2025-11-26T03:00:30.623Z"
           }
         ]
       },
@@ -1131,7 +1154,16 @@
       },
       "type": "flowNode",
       "context": {
-        "updatedAt": "2025-11-25T00:10:04.100Z"
+        "updatedAt": "2025-11-26T03:00:51.757Z",
+        "referenceLinks": [
+          {
+            "id": "reflink-1764126050689-a6906igh1",
+            "url": "https://nextjs.org/docs/llms.txt",
+            "title": "Next.js for LLMs.txt",
+            "createdAt": "2025-11-26T03:00:50.689Z",
+            "updatedAt": "2025-11-26T03:00:50.689Z"
+          }
+        ]
       },
       "itemType": "node",
       "position": {
@@ -1910,7 +1942,7 @@
     "document": "2",
     "application": "1.7.2"
   },
-  "version": "1.3",
+  "version": "1.4",
   "schemaContext": {
     "schemaVersion": "https://cambigo.com/schemas/flow-document-v2.json",
     "schemaUrl": "https://cambigo.com/schemas/flow-document-v2.json",
